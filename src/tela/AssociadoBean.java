@@ -31,7 +31,6 @@ public class AssociadoBean {
 	}
 	
 	public void salvar() {
-			
 				Associado obj = new Associado();
 				obj.setNome(nome);
 				obj.setEmail(email);

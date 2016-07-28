@@ -51,20 +51,20 @@ public class AssociacaoDao {
 	}
 	
 	public List<Associado> getAssociados() {
-		Query sql = manager.createQuery("from associado", Associado.class);
+		Query sql = manager.createQuery("from Associado", Associado.class);
 		@SuppressWarnings("unchecked")
 		List<Associado> lista = sql.getResultList();
 		return lista;
 	}
 	
 	public List<Atividade> getAtividades() {
-		Query sql = manager.createQuery("from atividade", Atividade.class);
+		Query sql = manager.createQuery("from Atividade", Atividade.class);
 		@SuppressWarnings("unchecked")
 		List<Atividade> lista = sql.getResultList();
 		return lista;	}
 	
 	public List<Agendamento> getAgendamentos() {
-		Query sql = manager.createQuery("from agendamento", Agendamento.class);
+		Query sql = manager.createQuery("from Agendamento", Agendamento.class);
 		@SuppressWarnings("unchecked")
 		List<Agendamento> lista = sql.getResultList();
 		return lista;	}

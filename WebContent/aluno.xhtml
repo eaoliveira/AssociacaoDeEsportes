@@ -19,8 +19,8 @@
 					<h:commandButton value="Salvar" action="#{associadoBean.salvar}" />
 				</div>
 			</form>
-		<br />
-			<form id="form1" jsf:rendered="#{associadoBean.count> 0}">
+		    <br />
+			<form id="form2" jsf:id="form2" >
 				<div>
 					<p:dataTable value="#{associadoBean.associados}" var="associado"
 						paginator="true" rows="4" paginatorPosition="bottom" emptyMessage="Não existem Associados Cadastrados">
