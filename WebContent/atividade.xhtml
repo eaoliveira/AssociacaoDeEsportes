@@ -11,7 +11,7 @@
 			<form id="form1" jsf:id="form1">
 				<div>
 					<label for="nome">Descricao</label>
-	 				<input type="text" size="25" name="nome" jsf:id="nome" value="#{atividadeBean.descricao" required="required" aria-required="true"/>
+	 				<input type="text" size="25" name="nome" jsf:id="nome" value="#{atividadeBean.descricao}" required="required" aria-required="true"/>
 	 			</div><div>
 					<h:commandButton value="Salvar" action="#{atividadeBean.salvar}" />
 				</div>
@@ -22,7 +22,7 @@
 					<p:dataTable value="#{atividadeBean.atividades}" var="associado"
 						paginator="true" rows="4" paginatorPosition="bottom" emptyMessage="Não existem Associados Cadastrados">
 						
-						<p:column headerText="Nome">
+						<p:column headerText="Descricao">
 										<span><h:outputText value="#{associado.descr}" /></span>
 						</p:column>
 
