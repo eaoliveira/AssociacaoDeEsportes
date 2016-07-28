@@ -1,0 +1,33 @@
+<ui:composition  xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+    xmlns:jsf="http://xmlns.jcp.org/jsf"
+    xmlns:p="http://primefaces.org/ui"
+
+	template="/adm.xhtml">			
+		<ui:define name="conteudo">	
+		
+			<form id="form1" jsf:id="form1">
+				<div>
+					<label for="nome">Descricao</label>
+	 				<input type="text" size="25" name="nome" jsf:id="nome" value="#{atividadeBean.descricao" required="required" aria-required="true"/>
+	 			</div><div>
+					<h:commandButton value="Salvar" action="#{atividadeBean.salvar}" />
+				</div>
+			</form>
+		    <br />
+			<form id="form2" jsf:id="form2" >
+				<div>
+					<p:dataTable value="#{atividadeBean.atividades}" var="associado"
+						paginator="true" rows="4" paginatorPosition="bottom" emptyMessage="Não existem Associados Cadastrados">
+						
+						<p:column headerText="Nome">
+										<span><h:outputText value="#{associado.descr}" /></span>
+						</p:column>
+
+					</p:dataTable>
+				</div>
+			</form>
+	</ui:define>
+</ui:composition>
